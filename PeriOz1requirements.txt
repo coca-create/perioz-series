@@ -2,12 +2,15 @@ PeriOz1:システム要件
 - Windows 10 以上(Macには対応していません。)
 - 16GB RAM(8GBでも動くと思いますが、システムのメモリ使用量により変わります。)
 - 2.5GBのディスク空き容量(その他faster-whisperのモデルをダウンロードする領域が必要です)
+- GPU利用の場合 Nvidia製GTX10シリーズ以降。
+- CPU利用の場合 特に条件はありません。
+- 条件を満たす場合においても、事前に試用版にて確認をしてください。
 
 (i) このアプリはCPU駆動とGPU*駆動を選択できます。GPU駆動を選ぶ場合、十分な性能をもったNVIDIA製のGPUが必要です。高精度の文字起こし機能を使うにはfloat16を使える8GB程度のGPUか,float32のみなら8GBを超えるメモリを積んだGPUが必要になると思います。
 
-*cuda(GPU)利用でmodel="large-v2",compute_type=float32,beam_size=5で8GB前後。これが私がよく使う設定です。例えば、8GBのメモリ搭載のNVIDIA 1070ti-8GB(float16は使用不可)で上記設定でも動きますが、GPUメモリの不足でエラーになることもあります。"large-v2",compute_type=float16,beam_size=5も同様によく使います。この場合、8GB以下でも対応可能です。
+*参考:cuda(GPU)利用でmodel="large-v2",compute_type=float32,beam_size=5で8GB前後。これが私がよく使う設定です。例えば、8GBのメモリ搭載のNVIDIA 1070ti-8GB(float16は使用不可)で上記設定でも動きますが、GPUメモリの不足でエラーになることもあります。"large-v2",compute_type=float16,beam_size=5も同様によく使います。この場合、8GB以下でも対応可能です。
 
-*GPU:グラフィックカード
+**GPU:グラフィックカード
 
 (ii) また、CPUはfloat16(半精度浮動小数点)のオプションを利用することができません。またGPUもfloat16に対応していないものがあります。faster-whisperの仕様とCPU,GPU性能についてもお調べになった上でご検討ください。
 
