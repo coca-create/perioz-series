@@ -184,17 +184,22 @@ header {
 
 
 .main-container {
+  margin-top:20px;
   display: flex;
   
 }
 .left-column {
-  width: 350px;
+
+  width: 400px;
   padding: 20px;
+  margin-right:auto;
+  margin-left:auto;
 }
 .right-column {
   width: 100%;
   padding: 20px;
-  max-width: 1060px;
+  max-width: 1200px;
+  margin:auto;
 }
 .card-grid {
   display: grid;
