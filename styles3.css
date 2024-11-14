@@ -578,6 +578,7 @@ footer {
 }
 .fw_container h3 {
    position:relative;
+   display:inline-block;
     color: #555;
     margin-top: 1.5em;
  
@@ -586,18 +587,27 @@ footer {
     padding-left: 25px;
     font-size: 18px;
     margin-bottom:10px;
+    background-color: rgba(0, 0, 0, 0.03);
+    padding-right:20px;
+    box-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.3);
 
 }
 .fw_container h3::before{
   content:"";
   position:absolute;
   width:6px;
-  left:2px;
+  left:6px;
   top:2px;
   bottom:2px;
   background-color: #ff8f27;
   border-radius: 3px;
   box-shadow: 1px 1px 0.7px rgba(0, 0, 0, 0.3);
+}
+
+.orange_back{
+  padding:15px 15px;
+  background-color: rgba(255, 235, 205, 0.2);
+  padding-bottom:5px;
 }
 .fw_container>p{display:flex;}
 
@@ -624,7 +634,7 @@ footer {
 }
 
 .fw_container ul {
-    margin-top:1.5em;
+    margin-top:0px;
     padding-left: 2em;
 }
 .fw_container ul li {
@@ -709,6 +719,12 @@ img {
   border-radius: 5px;
   padding:20px;
   background-color:rgb(237, 245, 248);
+}
+.blue_box_light{
+
+  border-radius: 5px;
+  padding:20px;
+  background-color:rgba(237, 245, 248, 0.301);
 }
 
 .PeriOz1-container .content-section h2 {
@@ -795,7 +811,8 @@ img {
 }
 
 .PeriOz1-container .content-section .mini_box{
-  display:inline-block;
+  text-align: center;
+  display:block;
   padding:10px;
   background-color: #f1f1f1;
   margin-bottom:20px;
@@ -952,7 +969,7 @@ img {
 
 .p2_board{
   padding:10px 20px;
-  background-color: rgb(237, 251, 251);
+  background-color: rgba(237, 251, 251, 0.374);
   box-shadow: 0.5px 0.5px 0.7px rgba(0, 0, 0, 0.1);
   margin-bottom: 15px;
   line-height: 1.6;
@@ -1193,7 +1210,7 @@ img {
 }
 
 .pink_box{
-  background-color: #fef5fb;
+  background-color: #fef5fb6b;
   padding:10px 15px;
 }
 

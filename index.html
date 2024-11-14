@@ -323,6 +323,7 @@
             </div></div>
         
             <h3>パラメーター</h3>
+            <div class="orange_back">
             <ul>
                 <li><strong >language</strong>: 今回は英語のみ。</li>
                 <li><strong class="marker_orange">device</strong>: GPUまたはCPUの選択。</li>
@@ -333,33 +334,38 @@
                 <li><strong >vad_filter</strong>: 無音部分の検出（ON）。</li>
                 <li><strong >word_timestamps</strong>: ピリオド区切りの字幕作成に必須のためON。</li>
             </ul>
-        
+          </div>
             <h3>faster-whisperの欠点</h3>
-            <div class="highlight">
-                <p>高精度を目指してlarge-v3やfloat32を使用する際、次のような欠点が発生しやすくなります:</p>
+            <div class="orange_back" style="padding-bottom:15px;">
+            <div>
+                <p style="margin-bottom:8px;">高精度を目指してlarge-v3やfloat32を使用する際、次のような欠点が発生しやすくなります:</p>
                 <ul>
                     <li><strong class="marker_pink">幻聴現象</strong>: 同じフレーズを繰り返す、または文字起こしが途中で放棄された形になります。</li>
                     <li><strong class="marker_pink">句読点と大文字小文字の問題</strong>: ピリオドが省略されたり、すべて小文字に統一されることがあります。</li>
-                    <li><strong class="marker_pink">不適切なピリオド付加</strong>: 文脈に関係なくピリオドが挿入されることがあります。</li>
+                    <li style="margin-bottom:0;"><strong class="marker_pink">不適切なピリオド付加</strong>: 文脈に関係なくピリオドが挿入されることがあります。</li>
                 </ul>
             </div>
+          </div>
         
             <h3>使用例</h3>
+            <div class="orange_back" style="padding-bottom:15px">
             <p>私は主にlarge-v2、float32、beamsize 5の設定を使用しています。この組み合わせは高負荷ですが、精度と幻聴現象発生頻度のバランスから選んでいます。場合によってはfloat16に切り替えたり、beamsizeを調整することもあります。また、PeriOz2では問題点（幻聴現象以外）をAIで補正し、より正確な字幕出力を目指しています。</p>
-        </div>
+          </div>
+          </div>
 
 
 
         <section class="PeriOz1-container" id="p1">
           <h1 class="underline_blue">PeriOz 1</h1>
           <div class="content-section">
-              <p class="blue_box" style="display:flex;padding-right:20px;"><span>▶</span><span>　</span><span style="word-break: break-all;">PeriOz1の使い方はとてもシンプルです。ファイルを読込ませて文字起こしを実行するだけです。
+              <p class="blue_box_light" style="display:flex;padding-right:20px;"><span>▶</span><span>　</span><span style="word-break: break-all;">PeriOz1の使い方はとてもシンプルです。ファイルを読込ませて文字起こしを実行するだけです。
                 ピリオド区切りの弊害を回避するための仕組みや指定単語の置き換えに対応。デスクトップ版なので、動画ファイルを軽量化する必要がなく複数ファイルの文字起こしも可能です。"対応ファイルの拡張子は音声ファイルは".mp3"、動画ファイルは".mp4"、".webm"、".mkv"です。
 
               </span></p>
               <h2>入力方法</h2>
+
               <div class="sumaho">
-            
+              <div class="blue_box_light" style="padding-top:5px;padding-bottom:5px;">
               
             
                   <p class="box_button">起動前</p>
@@ -374,11 +380,12 @@
                           <li style="display:flex;">②<span style="padding-left:10px;">UIにて「フォルダ指定」を選択し、フォルダを選びます。そのフォルダ内の対象ファイルが文字起こし対象になります</span></li>
                       </ul>
             
-                
+                    </div>  
               </div>        
               <h2>設定</h2>
               <div class="sumaho">
               <h3>出力ファイル設定</h3>
+              <div class="blue_box_light">
               <p class="mini_box">「設定ボタン」>>「出力ファイル設定」にて、出力したいファイルを選択します。各ファイルの説明は以下の通りです。</p>
               <div class="teigi">
                   <strong>＊ JSON :</strong> <span>すべてのwordとwordごとのタイムスタンプを記録したファイルです。PeriOz2で、字幕の補正をする際に使います。</span>
@@ -392,8 +399,9 @@
               </div>
               <div style="text-align: center;">
               <p class="div_center">保存ボタンを押すことで現在の設定が保存され、次回起動時以降も同じ設定が適用されます。</p>
-              </div></div>
+              </div></div></div>
               <h3>その他の設定</h3>
+              <div class="blue_box_light">
                 <div style="margin:auto;width:90%;">
                   <p>
                   <strong class="marker_sky">置き換え単語設定:</strong> faster-whisperが正確に文字起こしできない固有名詞等を登録し、自動で置換します。
@@ -408,15 +416,17 @@
                   <strong class="marker_sky">Initial Prompt設定:</strong> faster-whisperに設定するパラメーターの1つです。
                   </p>
                 </div>
-  
+              </div>
               <h2>文字起こしの実行</h2>
               <div class="sumaho">
+              <div class="blue_box_light">
               <p>ファイルの入力、各種パラメーターの選択、出力ファイルの保存場所の指定後、「Transcribe」ボタンを押します。</p>
               <p>文字起こし開始後はStopボタンで中止できますが中止完了まで暫くかかります。ダイアログが出るまでお待ち下さい。</p>
               <p>文字起こしを終えると終了ダイアログが表示されます。</p>
               <p>設定したパラメーターは次回起動時の設定に反映されます。</p>
               <p>出力指定した出力場所に、既に動画と同じベースネームのjsonファイル、あるいは、srtファイルが存在する場合、当該ファイルの文字起こしはスキップされる仕組みになっています。</p>
               </div>
+            </div>
           </div>
       </section>
 
@@ -518,10 +528,11 @@
               <span class="marker_purple">"_sp_ja"</span> , 
               <span class="marker_purple">"_spc_ja"</span>などが尻尾（以下tailと呼びます）につきます。</p>
            
-          </div>
-          <div style="margin-right:10px;margin-left:10px; word-break: break-all;text-align: justify;">
+         
+          <div style=" word-break:break-all;text-align: justify;margin-top: 8px;">
             英語字幕、日本語字幕の両方を処理するので、"_xxx"が複数付きます。PeriOz3では、basenameとこれらのtailの部分を元に動画ファイルに対応した字幕を各表示部に自動で割り振ります。以下、出力可能なファイル名の一部を添付しますが、必要なものだけ利用します。
           </div>
+        </div>
           <p class="p2_button" style="margin-top:20px;">出力ファイル一覧（参考）</p>
           <div style="text-align: center;margin-top:20px;" >
             <img src="tails.png" alt="ファイル名の説明" class="tails">
@@ -574,7 +585,8 @@
         </div></div>
         <h2>動画ファイルの読み込み</h2>
         <div class="sumaho">
-          <p class="box_button" style="margin-bottom:10px;margin-top: 15px;">起動前</p>
+          <div class="blue_box_light">
+          <p class="box_button" style="margin-bottom:10px;">起動前</p>
           <ul class="pad_left">
               <li style="display:flex;">①<span style="padding-left:10px;">アプリのショートカットにドラッグ＆ドロップ</span></li>
               <li style="display:flex;">②<span style="padding-left:10px;">ファイルを選択してコンテキストメニューの「送る」からPeriOz3を選択</span></li>
@@ -588,8 +600,10 @@
               <li style="display:flex;">④<span style="padding-left:10px;">以前見た動画であれば、「続きを見る」を押して、動画選択</span></li>
           </ul>
         </div>
+        </div>
         <h2>字幕ファイルの読み込み</h2>
         <div class="sumaho">
+        <div class="blue_box_light">
         <p style="margin-bottom:10px;">「字幕のファイル情報等」ボタンで、ファイル名のtail部分を指定している場合、自動で読込まれます。</p>
         <p style="margin-bottom:10px;">また「続きを見る」をご利用の場合も前回表示されていた字幕が自動で読込まれます。</p>
         <p style="margin-bottom:10px;">任意のファイルを読込ませる際は以下の操作で読み込みを行って下さい。</p>
@@ -600,8 +614,10 @@
           <li style="display:flex;">③<span style="padding-left:10px;">「字幕のファイル情報等」ボタンでtail指定と反映を使う。※ tailは"_xxx"のこと。</span></li>
         </ul>
       </div>
+      </div>
         <h2>字幕表示と調整</h2>
         <div class="sumaho">
+        <div class="blue_box_light">
         <p class="box_button" style="width:100px; margin-bottom:15px;margin-top:15px;">字幕表示</p>
         <p style="margin-bottom:10px;">字幕表示は、<span class="marker_pink">メイン字幕</span>（動画上に表示される字幕）、<span class="marker_pink">サブ字幕</span>、<span class="marker_pink">オーバーレイ字幕</span>の3つがあります。</p>
         <p style="margin-bottom:10px;">サブ字幕の位置（動画の上か下か）やオーバーレイ字幕の表示・非表示は最下部にあるチェックボタンで操作します。</p>
@@ -622,26 +638,30 @@
         <p class="fl"><span>⑤　</span>タイムスケールの位置<br>（タイムスケールバーの長さ調整）</p>
         <p>です。</p>
       </div>
+      </div>
     </div>
     <h2>デフォルトの字幕読み込み設定</h2>
     <div class="sumaho">
+      <div class="blue_box_light">
       <p style="margin-bottom: 10px;">新たに動画ファイルを読込んだ際に、動画ファイルと同一フォルダ内にある字幕ファイルを設定に基づいて読込みます。表示領域と字幕ファイルの対応を設定するのが「字幕のファイル情報等」のボタンです。</p>
       <p style="margin-bottom: 10px;">以下のような画面が表示されるので、自動読み込みしたいファイルのtailをdropdownメニューから選択します。保存ボタンで選択情報をファイルに保存することで次回以降の自動読み込みに反映されます。</p>
       <p>また、設定後すぐに反映したい場合は「設定を現在の動画に反映」ボタンを押すことで反映されます。</p>
       <p style="display: flex;"><span>※</span><span>　</span>各ウィジェットに対し4カ所選ぶ場所（4列）があります。左から順に第1候補から第4候補となります。</p>
-    </div>
+  
     <p style="text-align: center;"> <img class="fileinfo" src="fileinfo.png" alt="ファイル情報ダイアログの内容説明" ></p>
-      
+  </div>  </div>
     <h2>過去の動画の続きを見る</h2>
     <div class="sumaho">
+      <div class="blue_box_light">
       <p style="margin-bottom: 10px;">動画再生を行うと、サムネイル画像の撮影・保存と、10秒ごとに動画情報の記録が行われます。</p>
       <p style="margin-bottom: 10px;">10秒ごとの記録内容は、動画ファイル名、字幕ファイル情報、再生時間情報です。過去10個の動画情報が保存されます（ファイル名が同一の場合、古い物は更新されます）。</p>
       <p style="margin-bottom: 10px;">過去に見た動画の続きを見たい場合、「続きを見る」ボタンを押します。記録された情報が以下の画像のように表示されます。見たい動画を探して選択します。</p>
       <p>字幕の読み込みと同期が一度に行われるので少し時間を要します。ダイアログは自動で閉じます。再生ボタンを押すと、過去の続きから動画視聴が可能になります。</p>
-    </div>
-      <p style="text-align: center;"> <img class="fileinfo" src="medias.png" alt="ファイル情報ダイアログの内容説明" ></p>
 
+      <p style="text-align: center;"> <img class="fileinfo" src="medias.png" alt="ファイル情報ダイアログの内容説明" ></p>
+    </div></div>
     <h2>ショートカットキーとコンテキストメニュー</h2>
+    <div class="blue_box_light">
     <div class="sumaho">
       <p style="margin-bottom:10px;">ショートカットキーは、キーボード入力の組み合わせでボタンの押下の代わりをします。コンテキストメニューとは右クリックで表示されるメニューのことです。</p>
       <p style="margin-bottom:10px;">ショートカットキーのヒントはボタン上に表示してありますが、Controlキー、ShiftキーあるいはFn（ファンクション）キーとの組み合わせで構成してあります。</p>
@@ -691,6 +711,7 @@
       </dl>
     </div>
     </div>
+  </div>
 
   </section>
 
@@ -724,35 +745,48 @@
           <p>Google Driveをお使いなら、Google Drive版が楽です。</p> 
         </div>
         <h3>起動方法</h3>
+        
         <div class="kidou">
-
+          <div class="pink_box">
           <p>Googleさんとの契約の仕方から起動方法までを説明します。Google Colabに移動したら、以下の手順で契約をします。</p>
           <p>私はColab Proしか使ったことがありませんが、Colab Pro+はもう少し手厚いようです。</p>
-          <div style="text-align:center;">
+          </div>
+
+          <div style="text-align:center;margin-top:30px;">
           <img class="colab_1" src="colab_1.png" alt="colabの使い方">
-          
-          <p style="margin-top:30px">契約したら起動しましょう。</p>
-          <p style="margin-bottom: 30px;">貸してもらうGPUを選んで、接続します。</p>
-          
+        <div class="pink_box" style="margin-top:30px;margin-bottom:30px;">
+          <p >契約したら起動しましょう。</p>
+          <p >貸してもらうGPUを選んで、接続します。</p>
+        </div>
             <img class="colab_1" src="colab_2.png" alt="colabの使い方2">
-            <p style="margin-top:30px">あとは<span class="marker_orange">Google Colab版</span>は3回▶を押し、<span class="marker_orange">one file版</span>は2回▶を順に押します（それぞれの完了を待って次を押す）。</p>
+           
+            <p style="margin-top:30px"></p>
+          <div class="pink_box">
+            <p>あとは<span class="marker_orange">Google Colab版</span>は3回▶を押し、<span class="marker_orange">one file版</span>は2回▶を順に押します（それぞれの完了を待って次を押す）。</p>
             <p>Google Driveのマウントではウィザードでいくつか質問されます。順次答えるだけなので難しくはないと思います。</p>
             <p>最後の▶を押したのち、表示されたリンクの一方（public URL）をクリックするとアプリ起動します。</p>
+          </div>
             <p style="margin-bottom: 30px;"></p>
           
             <img class="colab_1" src="colab_3.png" alt="colabの使い方2">
-
+          <div class="pink_box">
             <p>アプリの利用終了後は、意図しないGPU消費を避けるため、▼から[ランタイムを接続解除して削除]をしましょう。</p>
           </div>
+          </div>
        
-       
+      </div>
     
         <h2 style="margin-bottom:15px">利用方法（共通）</h2>
         <div class="mb8">
+        <div class="pink_box">
         <p>利用方法はGoogle Colab版、Desktop版でほぼ同じです。</p>
-        
+      
         <p>アプリが起動できたら、アプリのタブ（Chrome上に開いているはず）を使って文字起こしをします。</p>
+        </div>
+
+
         <h3>文字起こしと翻訳（Tab1,Tab2）</h3>
+        <div class="pink_box">
         <p><img src="drive.png" alt="GoogleDrive版説明" class="float-r"></p>
         <p>文字起こしは音源ファイルのアップロードから。</p>
         <p>Google Colab版の場合、動画ファイルはMP3に変換した上でアップロードしましょう。</p>
@@ -779,16 +813,25 @@
         </div>
         
           <dt><h3>SRT/VTT → Excel(2言語)（Tab3）</h3></dt>
+          <div class="pink_box">
           <dd>日英字幕を比較するための表（Excelファイル）を生成します。タイムスタンプが同じ2つのファイルを入力する必要があります。</dd>
+          </div>
           <dt><h3>翻訳お手伝い②（Tab4）</h3></dt>
+          <div class="pink_box">
           <dd>文字起こしの際ではなく、あとから翻訳を行うためのタブです。ファイルのアップロード操作があるだけで、Tab2と同様の操作をして日本語ファイルを作成します。whisperで生成したテキストファイルも翻訳可能です（tail が _NR あるいは _R のファイルのみ）。</dd>
+          </div>
           <dt><h3>Word/Excel ↔ SRT/VTT/TXT（Tab5）</h3></dt>
+          <div class="pink_box">
           <dd>コピペではなく、<span class="marker_orange">Googleドキュメント翻訳</span>を使うためにsrt,vtt,txt形式のファイルをOfficeファイルに変換します。そして翻訳後のOfficeファイルをsrt,vtt,txtに再度変換して戻します。</dd>
+          </div>
           <dt><h3>配布字幕の再編（Tab6）</h3></dt>
+          <div class="pink_box">
           <dd>whisperによる文字起こしではなく、<span class="marker_sky">配布されている英語字幕ファイル</span>を<span class="marker_yellow">ピリオド区切りに再編し</span>、翻訳するタブです。</dd>
+          </div>
           <dt><h3>日本語srt/vttの句点分割（Tab7）</h3></dt>
+          <div class="pink_box">
           <dd>日本語に翻訳をすると、1つのセグメントに2つの日本語の文章が多々入ります。そこで、句点等の文末マークでセグメントを分割します。分割時のタイムスタンプは文字数に基づく比例配分で生成しています。<br>※ セグメント：字幕区切りのこと</dd>
-          
+          </div>
         </div>
         <h2>PeriOz Web Desktop版の終了の仕方</h2>
         <div class="pink_box">
@@ -806,7 +849,6 @@
           <p style="margin-bottom: 10px;">それでも解決しない場合は、Chromeにインストールされている<strong>拡張機能</strong>や<strong>常駐アプリ</strong>（私の経験ではDeepLアプリ）を削除あるいは終了することで改善することがあります。</p>
         </div>
 
-    </div>
   </section>
 
 
@@ -1213,7 +1255,7 @@
           <img class="pazera_img" src="se1.png" alt="Pazera Freeの画像" style="box-shadow: none;">
         </div>  
         <p>赤枠部分をクリックしてUIを決定します。</p><p>音声波形は不要、かつ、動画再生は必要なときのみ使うので<span class="maker_pink">12番</span>を使います。</p>
-        <p>※ 自分の耳を頼りに正確な字幕編集を目的とするなら波形表示部分と動画部分は必須です。必要に応じてUIを変更すれば良いと思います。</p>
+        <p style="display:flex;"><span>※</span><span style="display:inlin-block;width:6px;"></span>自分の耳を頼りに正確な字幕編集を目的とするなら波形表示部分と動画部分は必須です。必要に応じてUIを変更すれば良いと思います。</p>
 
         <p>次に青枠部分をクリックして設定画面に移動します。以下は私の指定している設定ですが、セグメント内の折り返しを避ける様に設定しも、長いセグメントの分割時にはやはり折り返しが入ってしまいます（&lt;br/&gt;のこと）。仕方ないので手動で削除してています。
         </p>
