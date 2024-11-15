@@ -605,7 +605,7 @@
         <h2>字幕ファイルの読み込み</h2>
         <div class="sumaho">
         <div class="blue_box_light">
-        <p style="margin-bottom:10px;">「字幕のファイル情報等」ボタンで、ファイル名のtail部分を指定している場合、自動で読込まれます。</p>
+        <p style="margin-bottom:10px;">「字幕のファイル情報等」で開くダイアログ内で、ファイル名のtail部分を指定している場合、自動で読込まれます。</p>
         <p style="margin-bottom:10px;">また「続きを見る」をご利用の場合も前回表示されていた字幕が自動で読込まれます。</p>
         <p style="margin-bottom:10px;">任意のファイルを読込ませる際は以下の操作で読み込みを行って下さい。</p>
       
@@ -732,7 +732,7 @@
           <p style="display:flex; padding-left: 5px"><span>・</span>whisperが一部欠点を持つ字幕ファイルを生成した場合、修復機能がないこと。</p>
           <p style="display:flex; padding-left: 5px"><span>・</span>複数ファイルの一括文字起しには対応していないこと（対応してもGoogleColabではほぼ使い物になりませんでした）</p>
           <p style="display:flex; padding-left: 5px"><span>・</span>単語置き換えに対応していないこと。</p>
-          <p style="display:flex; padding-left: 5px"><span>・</span><span>読点分割に対応していないこと。※ 近い機能は<span class="marker_yellow">Subtitle Edit</span>（<a href="https://github.com/SubtitleEdit/subtitleedit/releases" target="_blank">DLリンク</a>）というフリーアプリで対応可能です。</span></p>
+          <div style="display:flex; padding-left: 5px"><span>・</span><span>読点分割に対応していないこと。<p style="display:flex;"><span>※</span><span style="width:8px;display:inline-block;"></span><span> 近い機能は<span class="marker_yellow">Subtitle Edit</span>（<a href="https://github.com/SubtitleEdit/subtitleedit/releases" target="_blank">DLリンク</a>）というフリーアプリで対応可能です。</span></span></p></div>
           <p style="margin-top:5px">です。</p>
         </div></div>
         <h2>Google Colab版の起動の仕方</h2><br>
@@ -903,7 +903,7 @@
               <p><dt>RAM:</dt><dd>16GB以上</dd></p>
               <p><dt>HDD空き領域:</dt><dd>500MB</dd></p>
               <p><dt>CPU:</dt><dd>制限は特に設けません。モバイル（PCCore™ i5-10210U）では若干動作に影響が出ます。お試し版をご利用の上ご判断ください。</dd></p>
-              <p><dt>Software:</dt><dd>VLC media playerの事前インストール。</dd></p>  
+              <p><dt>Software:</dt><dd><span class="marker_yellow"><a href="https://www.videolan.org/vlc/" target="_blank"> VLC media player </a></span>の事前インストール。</dd></p>  
               <p><dt>LICENSE</dt><dd>必ず<a href="LICENSES_PeriOz3.html" target="_blank"><span class="marker_pink">こちら</span></a>を確認後にご利用下さい。</dd></p>
               <p><dt>動作環境文書</dt><dd>詳細は<a href="PeriOz3requirements.txt" download=""><span class="marker_pink">こちら</span></a>からダウンロードしてください。</dd></p>        
             </div>
@@ -1144,7 +1144,7 @@
           <img class="pazera_img" src="ytdlp_install.png" alt="Pazera Freeの画像" style="box-shadow: none;">
 
         </div>
-        <p><strong>ytdlp-interface.7z</strong>と同じ場所に、<span class="marker_purple">ytdlp-interfaceフォルダ</span>が生成されるていると思います。この中に入っている、<span class="marker_purple">ytdlp-interface.exe</span>がアプリの実行ファイルです。</p>
+        <p><strong>ytdlp-interface.7z</strong>と同じ場所に、<span class="marker_purple">ytdlp-interfaceフォルダ</span>が生成されていると思います。この中に入っている、<span class="marker_purple">ytdlp-interface.exe</span>がアプリの実行ファイルです。</p>
         <p>フォルダをどこかに移動して、<strong>ytdlp-interface.exe</strong>を右クリックしてデスクトップにショートカットを作ると良いと思います。</p>
         <p class="mini_button"><span class="hole">使い方</span></p>
         <p>使い方の一例をのせますね。</p>
@@ -1275,7 +1275,7 @@
 
         <p style="display:flex"><span>②</span><span>　</span><span class="marker_yellow">長い行の分割</span></p>
         <p>日本語字幕ファイルを読込ませて文字数の多いセグメントを分割、あるいは、英語ファイルを日本語化し保存する前に文字数の多いセグメントを分割します。メニューバーから<strong>ツール</strong> ⇒ <strong>「長い文の分割」</strong>と進みます。</p>
-        <p>表示されたダイアログで、<strong> 各行の最大文字数</strong>と<strong> 行の最大文字数</strong>を私は両方60~70にしてています。</p>
+        <p>表示されたダイアログで、<strong> 各行の最大文字数</strong>と<strong> 行の最大文字数</strong>を私は両方60~70にしています。</p>
         <p>設定文字数を超えた行があるとチェックボタン付きの候補が上段に表示されます。ここに表示された文章は指定した文字数を超えた行の文章（分割前）です。</p>
         <p>分割後の様子は下段（緑の行）に表示されます。概ね2行に分割されていると思います。</p>
         <p>上段で分割候補の行番号を確認し、その行番号をもとに下段の分割結果を参照します。分割の必要がないものはチェックボタンをクリアすることで、分割しない選択ができます。</p>
