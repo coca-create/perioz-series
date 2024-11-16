@@ -1200,7 +1200,7 @@ img {
   background-image: linear-gradient(to left, #fef5fb 0%, #fb29c0 100%);
 }
 
-.PeriOz_web-container .content-section h2 {
+.PeriOz_web-container  h2 {
   position:relative;
    color: #555;
    margin-top: 1.5em;
@@ -1216,7 +1216,7 @@ img {
    display:inline-block;
 
 }
-.PeriOz_web-container .content-section h2::before{
+.PeriOz_web-container  h2::before{
  content:"";
  position:absolute;
  width:6px;
@@ -2259,7 +2259,7 @@ img {
     .p2_board>p{
       margin-bottom:13px;
     }
-    .PeriOz2-container .sumaho dd p{display:inline-flex;}
+ 
     .explain{
       padding:10px;
     }
