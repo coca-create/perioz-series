@@ -39,7 +39,7 @@
                         </div>
                     </li>
                     <li class="dropdown"> <a href="#none"><span class="material-symbols-outlined g_icon" style="color:white;">heart_plus</span><span class="md" style="color:white;">お薦めソフト</span></a>
-                        <div class="dropdown-content"> <a href="#pz">Pazera Free Audio Extractor</a> <a href="#yi">ytdlp-interface</a> <a href="#ye">yt-dlp.exe</a> <a href="#pp">Pot Player</a> <a href="#se">Subtitle Edit</a> <a href="#other">その他</a>
+                        <div class="dropdown-content"> <a href="#pz">Pazera Free Audio Extractor</a> <a href="#yi">ytdlp-interface</a>                              <a href="#pp">Pot Player</a> <a href="#se">Subtitle Edit</a> <a href="#other">その他</a>
                         </div>
                     </li>
                     <li class="dropdown"> <a href="#none"><span class="material-symbols-outlined g">person_raised_hand</span><span class="md">利用規約等</span></a>
@@ -93,8 +93,7 @@
                             <a href="#yi">ytdlp-interface</a>
                         </li>
                         <li>
-                            <a href="#ye">yt-dlp.exe</a>
-                        </li>
+</li>
                         <li>
                             <a href="#pp">Pot Player</a>
                         </li>
@@ -578,7 +577,7 @@
                             <div> 
                                 <dt>翻訳先言語</dt> 
                                 <dd>
-                                    <p ""><strong>翻訳先の言語を指定することで、翻訳後の句点,読点の区切り方が変更されます。また出力ファイル名につくドメインが変わります(掲載の国のうちの一部はまだ対応が終わっていません。)</strong></p>
+                                    <p><strong>翻訳先の言語を指定することで、翻訳後の句点,読点の区切り方が変更されます。また出力ファイル名につくドメインが変わります(掲載の国のうちの一部はまだ対応が終わっていません。)</strong></p>
                                 </dd>                                 
                             </div>
                         </div>
@@ -728,7 +727,7 @@
                                 <p style="margin-bottom:10px;">
                                 オーバーレイ字幕はオーバーレイの右下にカーソルを運び、Bにハンドルマークを出してクリック&ドラッグし領域の大きさを調整します。また、移動は上部（A:ラインより上）をクリック&ドラッグして操作します。 </p>
                                 <p style="text-align: center;"><img src="overlay.png" alt="オーバーレイの説明図" style="width:78%;box-shadow: none;margin-top:30px;"></p>
-                                <p class="box_button" style="padding:0 10px:">字幕の調整</p>
+                                <p class="box_button" style="padding:0 10px;">字幕の調整</p>
                                 <div class="clear_fix">
                                     <p><img src="settei.png" alt="オーバーレイの説明図" class="float_img"></p>
                                     <p>字幕幅、高さ、行間、フォントサイズ等の調整は「設定ボタン」から設定画面を開き、スケールバーを動かして調整します。</p>
@@ -1395,55 +1394,20 @@
                             </div>
                             <p>登録がすんだら、<strong>Start download</strong> を押せばダウンロードが始まります。右の <strong>Queue actions</strong>
                             からもダウンロードを開始することができますし、登録されたファイル名を右クリックしてもダウンロード開始のオーダーを出せます。</p>
+                            <p class="mini_button"><span class="hole">字幕のダウンロードについて</span></p>
+                            <p>さて、ytdlp-interfaceで字幕を一緒にダウンロードする方法を書きます。</p>
+                            <p>UIの中からembed subtitlesを選んでしまうと動画に字幕が埋め込まれる形になり、その動画はfaster-whisperで文字起こしできなくなってしまいます。</p>
+                            <p>そこで、<strong class="marker_yellow">Custom arguments</strong>を使います。添付画像のオレンジ枠部分です。</p>
+                            <p>Custom argumentsにチェックを入れて、右隣のテキストボックスに<span class="marker_orange">--write-sub</span>と入力します。</p>
+                            <p>製作された字幕をアップロードしている場合には、「<strong>--write-sub</strong>」、自動生成字幕の場合は「<strong>--write-auto-sub</strong>」と指定しますが、私は前者で成功することが多いです。これを指定した上で動画のダウンロードを実行すると、字幕ファイルと動画ファイルがダウンロードされます。</p>
+                            <p>もし、動画をダウンロードしたくなくて、字幕だけダウンロードしたい場合は、もう一つ指定を増やします。</p>
+                            <p><span class="marker_orange">--write-sub</span> <span class="marker_pink">--skip-download</span>というように動画のダウンロードはskipするように指示します。1つ前の指示との間には半角空白を入れます。これでダウンロードボタンを開始すると、動画ファイルはダウンロードされず、字幕ファイルのみがダウンロードされます。</p>
+                            
                             <p>以上、基本的な使い方を記しましたが、「ytdlp
                             interface」で検索すれば、使い方を記載したサイトが見つかると思います。一括登録や複数同時ダウンロード等、色々素晴らしい機能のあるアプリです。</p>
                         </div>
                     </div>
-                    <div class="content-section" id="ye">
-                        <h2 class="favorite_title_ye"> <div class="outer ye"><span class="inner">yt-dlp.exe</span>
-                            </div> </h2>
-                        <div class="blue_box_light">
-                            <p> <span class="marker_yellow">yt-dlp.exe</span>は動画や字幕をダウンロードするアプリで、上で紹介した <strong>ytdlp
-                                interface</strong> はこの <strong>yt-dlp.exe</strong>
-                            をGUIで操作できるようにしたアプリです。つまりポチポチボタンをおして使えるようにしてくれたのがError Flynnさん。ここでは、 <span class="marker_pink">字幕だけをダウンロードする</span>ために、このアプリの使い方を記します。</p>
-                            <p><strong>yt-dlp.exe</strong>は<strong>ytdlp interface</strong>のアプリフォルダに入っているので、それを使います。</p>
-                            <p>
-                            ytdlp interfaceフォルダを開いて、<span class="marker_purple">yt-dlp.exe</span>を見つけます。</p>
-                            <p class="mini_button"><span class="hole">yt-dlp.exeを使う前に･･･</span></p>
-                            <p>
-                            ただ、このアプリは<strong>ダブルクリック</strong>で起動するアプリではありません。 <strong>コマンドプロンプト</strong>から呼び出して使うアプリです。抵抗がある人もいると思いますが、やる作業は少ないので <strong>コマンドプロンプト</strong>を使ったことがない方でも、そもそも「<strong>コマンドプロンプト</strong>って何？」という方でも大丈夫だと思います。 </p>
-                            <p class="mini_button"><span class="hole">コマンドプロンプトを起動しよう！</span></p>
-                            <p> <strong>コマンドプロンプト</strong>は略して<span class="marker_yellow">cmd</span>です。タスクバーの<span class="marker_purple">Windowsマーク</span>を押して <span class="marker_purple">検索欄に「cmd」と打ちます。</span>。検索結果に<strong>コマンドプロンプト</strong>が出てくるのでクリックして起動します。 </p>
-                            <p class="mini_button"><span class="hole">ダウンロード先をデスクトップに変更</span></p>
-                            <p>
-                            Windowsの設定を変更していなければ、「<strong>C:\Users\Username&gt;</strong>」と表示されていると思います（Usernameは各々異なります）。ただ、このままだとダウンロードされたファイルがC:\Users\Usernameの中に保存されるので、そこへ取りに行かなくてはなりません。そこで、保存先をデスクトップにするよう命令します。<strong>cd
-                                despktop</strong>と入力します。そして、Enterを押します。 </p>
-                            <p>
-                            Enterを打つ前は「<strong>C:\Users\Username&gt;</strong><span class="marker_yellow">cd</span> <span class="marker_yellow">desktop</span>」、Enter後の </p>
-                            <p>新たな行は「<strong>C:\Users\Username\Desktop&gt;</strong>」です。これで、ダウンロードファイルはデスクトップにダウンロードされます。</p>
-                            <p class="mini_button"><span class="hole">yt-dlp.exeを呼び出す。</span></p>
-                            <p><strong>コマンドプロンプト</strong>から、<strong>yt-dlp.exe</strong>を呼び出します。必要なのは<span class="marker_purple">yt-dlp.exeのパス</span>です。パスは住所みたいなもので、アドレスのこと。「C:\Users\UserName\Desktop」のような表記です。 </p>
-                            <p><strong>ytdlp
-                                interfaceフォルダ</strong>の<strong>yt-dlp.exe</strong>を選択して、右クリックします（あるいはShift+右クリック）。コンテキストメニューから<span class="marker_pink">『パスのコピー』</span>を選び、パスを入手します。</p>
-                            <p><strong>コマンドプロンプト</strong>のウィンドウを選択して、<strong>Control+V</strong>で貼り付けます。</p>
-                            <p>すると、次の画像のようになります。</p>
-                            <div class="img_center">
-                                <img class="pazera_img" src="cmd1.png" alt="Pazera Freeの画像" style="box-shadow: none;">
-                            </div>
-                            <p>これで、<strong>コマンドプロンプト</strong>から<strong>yt-dlp.exe</strong>を呼び出すコードを書いたことになります。あと少し続きがあります。 </p>
-                            <p class="mini_button"><span class="hole">ダウンロードの実行</span></p>
-                            <p><strong>yt-dlp</strong>はオプションを指定して使います。</p>
-                            <p>今回は2つオプションの指定の仕方を紹介します。</p>
-                            <div style="text-align: center;">
-                                <p sytle="display:inline-block;"> <span class="marker_purple">"貼り付けたパス"</span> <span class="marker_orange">--write-sub</span> <span class="marker_pink">--skip-download</span> <span class="marker_yellow">https://free_download/Movie1</span></p>
-                            </div>
-                            <p>貼り付けたパスの次はスペースを1つ入れて、「<span class="marker_orange">--write-sub</span>」か「<span class="marker_orange">--write-auto-sub</span>」を書きます。前者は <strong>
-                                手動で提供されている字幕（お手製の字幕）をダウンロード</strong>するオプション指定。後者は<strong>自動生成された（機械翻訳の）字幕をダウンロード</strong>するオプション指定です。私の利用法の場合、基本前者（"--write-sub"）です。駄目なら、もう一方を試せば良いのです。 </p>
-                            <p>さて、次は固定（一択）です。「<span class="marker_pink">--skip-download</span>」。何を意味するかというと、動画はいらないよ（スキップして）！と言っているのです。</p>
-                            <p>あとはスペースを空けて <span class="marker_yellow">動画のアドレス</span>を貼り付けます。</p>
-                            <p>実行は<strong>Enterキー</strong>。うまくいけば、ダーッと経過が表示されて字幕ファイルがデスクトップにダウンロードされているはずです。</p>
-                        </div>
-                    </div>
+
                     <div class="content-section" id="pp">
                         <h2 class="favorite_title_pp"> <div class="outer pp"><span class="inner">Pot Player</span>
                             </div> </h2>
