@@ -638,6 +638,7 @@ footer p {
     width: 90%;
     text-align: start;
     display: flex;
+    gap:25px;
     margin: auto;
     justify-content: space-between;
 }
@@ -2106,6 +2107,7 @@ form {
     .sidebar_info {
         width: 100%;
         display: flex;
+        gap:30px;
         justify-content: space-between;
         margin-top: 60px;
         margin-left: auto;
